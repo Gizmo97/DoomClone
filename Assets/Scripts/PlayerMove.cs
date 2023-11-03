@@ -58,7 +58,7 @@ public class PlayerMove : MonoBehaviour
             transform.Translate(moveVector * runSpeed * Time.deltaTime);
         }
         //JUMPING
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             rbody.AddForce(transform.up * jumpPower);
         }
