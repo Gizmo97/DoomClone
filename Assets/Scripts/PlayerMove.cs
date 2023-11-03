@@ -10,6 +10,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float runSpeed = 10f;
     [SerializeField] private float jumpPower = 10f;
     [SerializeField] private Vector3 moveVector;
+    [SerializeField] private Vector2 turnVector;
+    [SerializeField] private float turnSpeed = 2f;
+    [SerializeField] private float tempYrot;
     [SerializeField] private bool isRunning;
     [SerializeField] private bool isGrounded;
 
@@ -37,6 +40,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerStats = GetComponent<PlayerStats>();
         rbody = GetComponent<Rigidbody>();
     }
 
@@ -44,8 +48,18 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         //store input
-        moveVector = new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical")).normalized;
+        moveVector = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical")).normalized;
+        turnVector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         isRunning = Input.GetKey(KeyCode.LeftShift);
+
+        //TURNING
+        //Left/Right
+       transform.Rotate(0, turnVector.x * turnSpeed, 0);
+
+        //Up/Down
+        tempYrot += -Input.GetAxis("Mouse Y");
+        tempYrot = Mathf.Clamp(tempYrot, -10, 20);
+        Camera.main.transform.localRotation = Quaternion.Euler(tempYrot, 0, 0);
 
         //WALKING
         if (moveVector != Vector3.zero && isRunning == false)
