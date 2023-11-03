@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody rbody;
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float runSpeed = 10f;
-    [SerializeField] private float jumpPower = 10f;
+    [SerializeField] private float jumpPower = 5f;
     [SerializeField] private Vector3 moveVector;
     [SerializeField] private Vector2 turnVector;
     [SerializeField] private float turnSpeed = 2f;
@@ -74,7 +74,7 @@ public class PlayerMove : MonoBehaviour
         //JUMPING
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
-            rbody.AddForce(Vector3.up * jumpPower);
+            rbody.AddForce(transform.up * jumpPower, ForceMode.Impulse);
         }
 
         //DEATH
