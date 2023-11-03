@@ -74,7 +74,7 @@ public class PlayerMove : MonoBehaviour
         //JUMPING
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
-            rbody.AddForce(transform.up * jumpPower);
+            rbody.AddForce(Vector3.up * jumpPower);
         }
 
         //DEATH
