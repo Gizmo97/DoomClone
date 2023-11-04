@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f85867431994ba447b8b3805f04e3c8d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157724
+  packageName: POLYGON - Weapons
+  packageVersion: 1.0
+  assetPath: Assets/POLYGON weapons/Assets_official/FBXTexMat/POLYGON weapons pack/equipment_mats/red_dot_e/cam_2.renderTexture
+  uploadId: 346127

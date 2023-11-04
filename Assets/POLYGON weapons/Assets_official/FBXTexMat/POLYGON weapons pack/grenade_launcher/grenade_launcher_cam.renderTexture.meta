@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 35ae99d246859034496be79c09189d9b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157724
+  packageName: POLYGON - Weapons
+  packageVersion: 1.0
+  assetPath: Assets/POLYGON weapons/Assets_official/FBXTexMat/POLYGON weapons pack/grenade_launcher/grenade_launcher_cam.renderTexture
+  uploadId: 346127

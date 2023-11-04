@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 513c2f9880623654bb6c13c5a355c5e5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157724
+  packageName: POLYGON - Weapons
+  packageVersion: 1.0
+  assetPath: Assets/POLYGON weapons/Assets_official/FBXTexMat/POLYGON weapons pack/bullet_shells_fbxTexMat/12gauge.mat
+  uploadId: 346127

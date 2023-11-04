@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b50050d591248c748acccdd9de371df7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157724
+  packageName: POLYGON - Weapons
+  packageVersion: 1.0
+  assetPath: Assets/POLYGON weapons/Assets_official/FBXTexMat/POLYGON weapons pack/bullet_shells_fbxTexMat/9mm_bullet.mat
+  uploadId: 346127

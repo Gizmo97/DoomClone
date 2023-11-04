@@ -70,11 +70,13 @@ public class PlayerMove : MonoBehaviour
         else if (moveVector != Vector3.zero && isRunning == true)
         {
             transform.Translate(moveVector * runSpeed * Time.deltaTime);
+            playerStats.UpdateStamina(-0.02f);
         }
         //JUMPING
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             rbody.AddForce(transform.up * jumpPower, ForceMode.Impulse);
+            playerStats.UpdateStamina(-20f);
         }
 
         //DEATH

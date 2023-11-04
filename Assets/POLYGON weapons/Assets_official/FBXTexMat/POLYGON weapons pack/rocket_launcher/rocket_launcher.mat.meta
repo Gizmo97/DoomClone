@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44bbc8d1860f00f489666fc58e87696b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157724
+  packageName: POLYGON - Weapons
+  packageVersion: 1.0
+  assetPath: Assets/POLYGON weapons/Assets_official/FBXTexMat/POLYGON weapons pack/rocket_launcher/rocket_launcher.mat
+  uploadId: 346127
