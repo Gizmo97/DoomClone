@@ -35,8 +35,6 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -49,17 +47,20 @@ public class PlayerMove : MonoBehaviour
     {
         //store input
         moveVector = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical")).normalized;
-        turnVector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        turnVector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized;
         isRunning = Input.GetKey(KeyCode.LeftShift);
 
         //TURNING
         //Left/Right
-       transform.Rotate(0, turnVector.x * turnSpeed, 0);
-
-        //Up/Down
-        tempYrot += -Input.GetAxis("Mouse Y");
-        tempYrot = Mathf.Clamp(tempYrot, -10, 20);
-        Camera.main.transform.localRotation = Quaternion.Euler(tempYrot, 0, 0);
+        transform.Rotate(0, turnVector.x * turnSpeed, 0);
+        
+        if (turnVector.y != 0)
+        {
+            //Up/Down
+            //tempYrot += -Input.GetAxis("Mouse Y");
+            //tempYrot = Mathf.Clamp(tempYrot, -10, 20);
+            //transform.localRotation = Quaternion.Euler(tempYrot, 0, 0);
+        }
 
         //WALKING
         if (moveVector != Vector3.zero && isRunning == false)
