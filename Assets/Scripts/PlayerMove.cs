@@ -11,8 +11,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpPower = 5f;
     [SerializeField] private Vector3 moveVector;
     [SerializeField] private Vector2 turnVector;
-    [SerializeField] private float turnSpeed = 2f;
+    [SerializeField] private float turnXSpeed = 2f;
+    [SerializeField] private float turnYSpeed = 2f;
     [SerializeField] private float tempYrot;
+    [SerializeField] private float tempXrot;
     [SerializeField] private bool isRunning;
     [SerializeField] private bool isGrounded;
 
@@ -47,21 +49,15 @@ public class PlayerMove : MonoBehaviour
     {
         //store input
         moveVector = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical")).normalized;
-        turnVector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized;
+        turnVector = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         isRunning = Input.GetKey(KeyCode.LeftShift);
 
         //TURNING
-        //Left/Right
-        transform.Rotate(0, turnVector.x * turnSpeed, 0);
+        tempXrot += turnVector.x * turnXSpeed;
+        tempYrot += -turnVector.y * turnYSpeed;
+        tempYrot = Mathf.Clamp(tempYrot, -45, 45);
+        transform.localRotation = Quaternion.Euler(tempYrot, tempXrot, 0);
         
-        if (turnVector.y != 0)
-        {
-            //Up/Down
-            //tempYrot += -Input.GetAxis("Mouse Y");
-            //tempYrot = Mathf.Clamp(tempYrot, -10, 20);
-            //transform.localRotation = Quaternion.Euler(tempYrot, 0, 0);
-        }
-
         //WALKING
         if (moveVector != Vector3.zero && isRunning == false)
         {

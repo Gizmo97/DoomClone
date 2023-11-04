@@ -7871,6 +7871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2418701719544958834, guid: 1af2262aded10d14a8c0f2e8aa6b1717, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 3035591854517794669, guid: 1af2262aded10d14a8c0f2e8aa6b1717, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.542603
@@ -7910,6 +7914,14 @@ PrefabInstance:
     - target: {fileID: 3035591854517794669, guid: 1af2262aded10d14a8c0f2e8aa6b1717, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937058178233673545, guid: 1af2262aded10d14a8c0f2e8aa6b1717, type: 3}
+      propertyPath: turnXSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937058178233673545, guid: 1af2262aded10d14a8c0f2e8aa6b1717, type: 3}
+      propertyPath: turnYSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8467197921453602599, guid: 1af2262aded10d14a8c0f2e8aa6b1717, type: 3}
       propertyPath: armourBar
