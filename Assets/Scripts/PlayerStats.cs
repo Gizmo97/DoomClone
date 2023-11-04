@@ -10,14 +10,18 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth;
     public float curArmour;
     public float maxArmour;
+    public float curStamina;
+    public float maxStamina;
 
     [SerializeField] private Slider healthBar;
     [SerializeField] private Slider armourBar;
+    [SerializeField] private Slider staminaBar;
 
     private void Start()
     {
         UpdateHealth(maxHealth);
         UpdateArmour(maxArmour);
+        UpdateStamina(maxStamina);
     }
 
     public void UpdateHealth(float amount)
@@ -32,5 +36,12 @@ public class PlayerStats : MonoBehaviour
         curArmour += amount;
         curArmour = Mathf.Clamp(curArmour, 0, maxArmour);
         armourBar.value = curArmour;
+    }
+
+    public void UpdateStamina(float amount)
+    {
+        curStamina += amount;
+        curStamina = Mathf.Clamp(curStamina, 0, maxStamina);
+        staminaBar.value = curStamina;
     }
 }
