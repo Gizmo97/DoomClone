@@ -56,8 +56,10 @@ MonoBehaviour:
   jumpPower: 5
   moveVector: {x: 0, y: 0, z: 0}
   turnVector: {x: 0, y: 0}
-  turnSpeed: 2
+  turnXSpeed: 5
+  turnYSpeed: 5
   tempYrot: 0
+  tempXrot: 0
   isRunning: 0
   isGrounded: 0
   playerStats: {fileID: 0}
@@ -444,20 +446,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 997002588129007375}
     m_Modifications:
-    - target: {fileID: 1134820169720597037, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539999691736277239, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5248292506004001506, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
       propertyPath: m_Name
       value: revolver_prefab
       objectReference: {fileID: 0}
-    - target: {fileID: 7581196993564375704, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 5754598281185557666, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754598281185557666, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.073
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754598281185557666, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.218
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754598281185557666, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754598281185557666, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754598281185557666, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754598281185557666, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
+      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9119498848427860209, guid: 10a375ecf720bb8448ec9d19a4fd6741, type: 3}
